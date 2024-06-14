@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Generador de Contraseñas</title>
+<link rel="stylesheet" href="./css/config.css">
+</head>
+<body>
+<div class="container">
+    <h1>Generador de Contraseñas</h1>
+    <div class="form-group">
+        <label for="length">Longitud de la contraseña:</label>
+        <input type="number" id="length" min="4" max="128" value="12">
+    </div>
+    <div class="form-group">
+        <label for="count">Cantidad de contraseñas:</label>
+        <input type="number" id="count" min="1" max="20" value="1">
+    </div>
+    <div class="form-group">
+        <label for="include-lower">Incluir letras minúsculas:</label>
+        <input type="checkbox" id="include-lower" checked>
+    </div>
+    <div class="form-group">
+        <label for="include-upper">Incluir letras mayúsculas:</label>
+        <input type="checkbox" id="include-upper" checked>
+    </div>
+    <div class="form-group">
+        <label for="include-numbers">Incluir números:</label>
+        <input type="checkbox" id="include-numbers" checked>
+    </div>
+    <div class="form-group">
+        <label for="include-symbols">Incluir símbolos especiales:</label>
+        <input type="checkbox" id="include-symbols" checked>
+    </div>
+    <div class="form-group">
+        <label for="exclude-ambiguous">Excluir caracteres ambiguos:</label>
+        <input type="checkbox" id="exclude-ambiguous">
+    </div>
+    <button onclick="generatePasswords()">Generar Contraseñas</button>
+    <div class="passwords" id="passwords"></div>
+</div>
+<script src="./js/Main.js"></script>
+</body>
+</html>
